@@ -7,4 +7,8 @@ class Chopper
             -1
         end
     end
+
+    def sum(list)
+        'vacio'
+    end
 end
