@@ -1,4 +1,7 @@
 class Chopper
+
+    HUMANIZE_LIST = %w(zero uno dos tres cuatro cinco seis siete ocho nueve)
+
     def chop(number, list)
         index = list.index number
         if index
@@ -19,11 +22,6 @@ class Chopper
     private
 
     def humanize(number)
-        case number
-        when 1
-            'uno'
-        when 4
-            'cuatro'
-        end
+        HUMANIZE_LIST[number]
     end
 end
