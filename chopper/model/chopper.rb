@@ -15,9 +15,13 @@ class Chopper
         if list.size == 0
             'vacio'
         else
-            sum_string = sum_all(list).to_s
-            humanized = humanize_all(sum_string)
-            humanized.join(",")
+            total = sum_all(list)
+            if total > 99
+                'demasiado grande'
+            else
+                humanized = humanize_all(total.to_s)
+                humanized.join(",")
+            end
         end
     end
 
