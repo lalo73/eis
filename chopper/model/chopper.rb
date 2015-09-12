@@ -1,7 +1,8 @@
 class Chopper
     def chop(number, list)
-        if list.include? number
-            0
+        index = list.index number
+        if index
+            index
         else
             -1
         end
