@@ -9,6 +9,10 @@ class Chopper
     end
 
     def sum(list)
-        'vacio'
+        if list.size == 0
+            'vacio'
+        else
+            'uno'
+        end
     end
 end
