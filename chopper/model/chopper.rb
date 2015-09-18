@@ -1,6 +1,6 @@
 class Chopper
 
-    HUMANIZE_LIST = %w(zero uno dos tres cuatro cinco seis siete ocho nueve)
+    HUMANIZE_LIST = %w(cero uno dos tres cuatro cinco seis siete ocho nueve)
 
     def chop(number, list)
         index = list.index number
