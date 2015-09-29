@@ -76,4 +76,10 @@ describe "Round" do
     player_2.monkey!
     expect(player_1).to beat(player_2)
   end
+
+  it 'expect monkey to beat paper' do
+    player_1.monkey!
+    player_2.paper!
+    expect(player_1).to beat(player_2)
+  end
 end
