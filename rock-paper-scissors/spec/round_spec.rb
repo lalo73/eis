@@ -10,4 +10,10 @@ describe "Round" do
     player_2.paper!
     expect(player_2).to beat(player_1)
   end
+
+  it 'expect rock beat scissors' do
+    player_1.rock!
+    player_2.scissors!
+    expect(player_1).to beat(player_2)
+  end
 end

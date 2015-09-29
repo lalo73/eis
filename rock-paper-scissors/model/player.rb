@@ -6,6 +6,9 @@ class Player
   def paper!
   end
 
+  def scissors!
+  end
+
   def beats?(player)
     true
   end
