@@ -21,28 +21,15 @@ describe "Round" do
 
   it { expect(paper_player).to_not beat(monkey_player) }
 
-  it 'expect rock beat scissors' do
-    player_1.rock!
-    player_2.scissors!
-    expect(player_1).to beat(player_2)
-  end
+  it { expect(rock_player).to beat(scissors_player) }
 
-  it 'expect rock to not beat mockey' do
-    player_1.rock!
-    player_2.monkey!
-    expect(player_1).to_not beat(player_2)
-  end
+  it { expect(rock_player).to_not beat(monkey_player) }
 
-  it 'expect rock to not beat paper' do
-    player_1.rock!
-    player_2.paper!
-    expect(player_1).to_not beat(player_2)
-  end
+  it { expect(rock_player).to_not beat(paper_player) }
 
   it 'expect rock to not beat rock' do
-    player_1.rock!
     player_2.rock!
-    expect(player_1).to_not beat(player_2)
+    expect(rock_player).to_not beat(player_2)
   end
 
   it 'expect scissors to beat paper' do
