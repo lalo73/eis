@@ -12,6 +12,9 @@ class Player
     @choice = :scissors
   end
 
+  def monkey!
+  end
+
   def beats?(player)
     self.choice != player.choice && ((self.choice == :rock && player.choice == :scissors) || self.choice == :paper && player.choice == :rock)
   end
