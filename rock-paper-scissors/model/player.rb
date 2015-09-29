@@ -1,5 +1,12 @@
 class Player
   attr_reader :choice
+
+  WIN_TABLE = {
+    rock: {scissors: true},
+    paper: {rock:true},
+    scissors: {paper: true, monkey: true},
+    monkey: {paper: true}
+  }
   def rock!
     @choice = :rock
   end
@@ -17,7 +24,7 @@ class Player
   end
 
   def beats?(player)
-    self.choice != player.choice && ((self.choice == :rock && player.choice == :scissors) || self.choice == :paper && player.choice == :rock || self.choice == :scissors && player.choice == :paper || self.choice == :scissors && player.choice == :monkey)
+    WIN_TABLE[self.choice][player.choice]
   end
 end
 
