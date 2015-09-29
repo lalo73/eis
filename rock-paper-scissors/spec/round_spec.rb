@@ -34,4 +34,10 @@ describe "Round" do
     player_2.scissors!
     expect(player_1).to beat(player_2)
   end
+
+  it 'expect rock to not beat mockey' do
+    player_1.rock!
+    player_2.monkey!
+    expect(player_1).to_not beat(player_2)
+  end
 end
