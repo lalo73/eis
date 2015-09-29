@@ -16,7 +16,7 @@ class Player
   end
 
   def beats?(player)
-    self.choice != player.choice && ((self.choice == :rock && player.choice == :scissors) || self.choice == :paper && player.choice == :rock)
+    self.choice != player.choice && ((self.choice == :rock && player.choice == :scissors) || self.choice == :paper && player.choice == :rock || self.choice == :scissors && player.choice == :paper)
   end
 end
 
