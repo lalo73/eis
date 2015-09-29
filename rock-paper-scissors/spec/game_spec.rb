@@ -34,5 +34,12 @@ describe Game do
     subject.play!
     expect(subject.winner).to be_nil
   end
+
+  it 'expect to not have a winner' do
+    allow(player_1).to receive(:beats?).with(player_2).and_return(true, false, false)
+    allow(player_2).to receive(:beats?).with(player_1).and_return(false, true, false)
+    3.times { subject.play! }
+    expect(subject.winner).to be_nil
+  end
   
 end
