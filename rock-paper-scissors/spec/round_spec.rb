@@ -6,9 +6,9 @@ describe "Round" do
   let(:player_2) { Player.new }
 
   it 'expect paper beat rock' do
-    player_1.rock!
-    player_2.paper!
-    expect(player_2).to beat(player_1)
+    player_1.paper!
+    player_2.rock!
+    expect(player_1).to beat(player_2)
   end
 
   it 'expect paper to not beat scissors' do
