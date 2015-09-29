@@ -20,5 +20,12 @@ describe Game do
     3.times { subject.play! }
     expect(subject.winner).to eq(player_1)
   end
+
+  it 'expect no winner with just 1 round played' do
+    allow(player_1).to receive(:beats?).with(player_2).and_return(true)
+    allow(player_2).to receive(:beats?).with(player_1).and_return(false)
+    subject.play!
+    expect(subject.winner).to be_nil
+  end
   
 end
