@@ -5,11 +5,10 @@ describe "Round" do
   let(:player_1) { Player.new }
   let(:player_2) { Player.new }
 
-  it 'expect paper beat rock' do
-    player_1.paper!
-    player_2.rock!
-    expect(player_1).to beat(player_2)
-  end
+  let(:paper_player) { player(&:paper!) }
+  let(:rock_player) { player(&:rock!) }
+
+  it { expect(paper_player).to beat(rock_player) }
 
   it 'expect paper to not beat scissors' do
     player_1.paper!

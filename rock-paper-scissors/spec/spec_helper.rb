@@ -16,4 +16,10 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+
+  def player
+    new_player = Player.new
+    yield(new_player)
+    new_player
+  end
 end
