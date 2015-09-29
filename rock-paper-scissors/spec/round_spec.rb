@@ -17,6 +17,12 @@ describe "Round" do
     expect(player_1).to_not beat(player_2)
   end
 
+  it 'expect paper to not beat paper' do
+    player_1.paper!
+    player_2.paper!
+    expect(player_1).to_not beat(player_2)
+  end
+
   it 'expect rock beat scissors' do
     player_1.rock!
     player_2.scissors!
