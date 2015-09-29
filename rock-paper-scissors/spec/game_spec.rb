@@ -41,5 +41,4 @@ describe Game do
     3.times { subject.play! }
     expect(subject.winner).to be_nil
   end
-  
-end
+  end
