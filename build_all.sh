@@ -7,3 +7,7 @@ cd ..
 cd chopper
 bundle install
 bundle exec rake
+cd ..
+cd rock-paper-scissors
+bundle install
+bundle exec rake
