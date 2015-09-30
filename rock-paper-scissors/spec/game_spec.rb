@@ -48,13 +48,29 @@ describe Game do
   describe 'integration test' do
     let(:player_1) { Player.new }
     let(:player_2) { Player.new }
-    it 'expect to player 1 win if it beat twice' do
+    it 'expect a player to win if it beat twice' do
       player_1.rock!
       player_2.scissors!
       subject.play!
 
       player_1.paper!
       player_2.rock!
+      subject.play!
+
+      expect(subject.winner).to eq(player_1)
+    end
+
+    it 'expect a player to win if beats twice in any order' do
+      player_1.paper!
+      player_2.rock!
+      subject.play!
+
+      player_1.paper!
+      player_2.scissors!
+      subject.play!
+
+      player_1.monkey!
+      player_2.paper!
       subject.play!
 
       expect(subject.winner).to eq(player_1)
