@@ -1,6 +1,7 @@
 require 'spec_helper'
 require_relative '../model/game'
 require_relative '../model/player'
+require_relative '../exceptions/round_limit_exceded'
 
 describe Game do
   subject { described_class.new player_1, player_2 }
@@ -42,6 +43,13 @@ describe Game do
       allow(player_2).to receive(:beats?).with(player_1).and_return(false, true, false)
       3.times { subject.play! }
       expect(subject.winner).to be_nil
+    end
+
+    it 'expect to fail if game is player more than 3 times' do
+      allow(player_1).to receive(:beats?).with(player_2).and_return(true)
+      allow(player_2).to receive(:beats?).with(player_1).and_return(false)
+      3.times { subject.play! }
+      expect { subject.play! }.to raise_error(RoundLimitExceded)
     end
   end
   #Kinda integration test

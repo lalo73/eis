@@ -13,6 +13,7 @@ class Game
 
   def play!
     @round_count += 1
+    raise RoundLimitExceded.new if @round_count > 3
     @stats[player_1] += 1 if player_1.beats? player_2
     @stats[player_2] += 1 if player_2.beats? player_1
   end
