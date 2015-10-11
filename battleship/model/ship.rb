@@ -1,0 +1,4 @@
+class Ship
+  HORIZONTALLY = "HORIZONTALLY"
+
+end
