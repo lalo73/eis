@@ -1,9 +1,14 @@
 class Board
-  def initilize
-    @_board = {}
+  def initialize
+    @board = {}
   end
 
   def empty?
-    true
+    @board.empty?
+  end
+
+  def place_horizontally(ship, x, y)
+    @board[x] ||= []
+    @board[x].insert(y.to_i, ship)
   end
 end
