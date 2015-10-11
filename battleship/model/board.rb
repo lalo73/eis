@@ -13,6 +13,18 @@ class Board
   end
 
   def taken?(x, y)
-    !@board[x][y.to_i].nil?
+    y = y.to_i
+    taken_horizontally? x, y
+  end
+
+  private
+
+  def taken_horizontally?(x, y)
+    row = @board[x]
+    (0..y).to_a.reverse.any? do |position|
+      ship = row[position]
+      (!ship.nil?) && (ship.lenght - 1 + position) >= y
+    end
+
   end
 end

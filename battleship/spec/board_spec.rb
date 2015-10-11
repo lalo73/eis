@@ -20,15 +20,19 @@ describe Board do
       it {expect(subject).to_not be_empty}
 
       describe "#taken?" do
+
         it {expect(subject).to be_taken(positionA, positionB)}
+
+        it "takes until ship's lenght" do
+          delta_position = positionB.to_i + ship.lenght - 1
+          expect(subject).to be_taken(positionA, delta_position)
+        end
+
+        it "doesn't take more than ship's lenght" do
+          delta_position = positionB.to_i + ship.lenght
+          expect(subject).to_not be_taken(positionA, delta_position)
+        end
       end
-
-      #it "takes also ship's lenght" do
-
-      #  delta_position = positionB.to_i + ship.lenght - 1
-      #  expect(subject.taken? positionA, delta_position)
-      #end
-
     end
   end
 end
