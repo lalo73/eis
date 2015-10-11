@@ -19,7 +19,9 @@ describe Board do
 
       it {expect(subject).to_not be_empty}
 
-      #it {expect(subject.taken? positionA, positionB).to be_true}
+      describe "#taken?" do
+        it {expect(subject).to be_taken(positionA, positionB)}
+      end
 
       #it "takes also ship's lenght" do
 
