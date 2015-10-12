@@ -22,7 +22,7 @@ describe BattleshipGame do
 
       it {expect(subject).to_not be_empty}
 
-      #it {expect(subject.taken? positionA, positionB).to be_true}
+      it {expect(subject).to be_taken positionA, positionB}
 
     end
   end

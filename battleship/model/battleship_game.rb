@@ -17,4 +17,8 @@ class BattleshipGame
   def empty?
     @board.empty?
   end
+
+  def taken?(x, y)
+    @board.taken? x, y
+  end
 end
