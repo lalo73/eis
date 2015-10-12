@@ -8,7 +8,7 @@ describe Board do
   it { expect(subject).to be_empty }
 
   describe '#place_horizontally' do
-    let(:ship) { Ship.new }
+    let(:ship) { double("Ship", horizontally?: true,horizontally!: nil, lenght: 3) }
     let(:positionA) { "A" }
     let(:positionB) { "1" }
 
@@ -18,6 +18,7 @@ describe Board do
       end
 
       it {expect(subject).to_not be_empty}
+      it {expect(ship).to have_received(:horizontally!)}
 
       describe "#taken?" do
 
