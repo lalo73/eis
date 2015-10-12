@@ -1,5 +1,6 @@
 class Ship
   HORIZONTALLY = :horizontally
+  VERTICALLY = :vertically
 
   def default_lenght
     3
@@ -15,5 +16,13 @@ class Ship
 
   def horizontally?
     @position == HORIZONTALLY
+  end
+
+  def vertically!
+    @position = VERTICALLY
+  end
+
+  def vertically?
+    @position == VERTICALLY
   end
 end

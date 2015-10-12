@@ -24,4 +24,16 @@ describe Ship do
     end
   end
 
+  describe '#vertically?' do
+    it {expect(subject).to_not be_vertically}
+    context 'after call #vertically!' do
+      before :each do
+        subject.vertically!
+      end
+
+      it { expect(subject).to be_vertically }
+
+    end
+  end
+
 end
