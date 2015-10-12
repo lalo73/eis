@@ -38,7 +38,7 @@ describe Board do
   end
 
   describe '#place_vertically' do
-    let(:ship) { double("Ship", vertically?: true, vertically?: true,vertically!: nil, lenght: 3) }
+    let(:ship) { double("Ship", horizontally?: false, vertically?: true, vertically?: true,vertically!: nil, lenght: 3) }
     let(:positionA) { "A" }
     let(:positionB) { "1" }
 
@@ -49,22 +49,22 @@ describe Board do
 
       it {expect(subject).to_not be_empty}
       it {expect(ship).to have_received(:vertically!)}
-=begin
+
       describe "#taken?" do
 
         it {expect(subject).to be_taken(positionA, positionB)}
 
         it "takes until ship's lenght" do
-          delta_position = positionB.to_i + ship.lenght - 1
-          expect(subject).to be_taken(positionA, delta_position)
+          delta_position = (positionA.ord + ship.lenght - 1).chr
+          expect(subject).to be_taken(delta_position, positionB)
         end
 
         it "doesn't take more than ship's lenght" do
-          delta_position = positionB.to_i + ship.lenght
-          expect(subject).to_not be_taken(positionA, delta_position)
+          delta_position = (positionA.ord + ship.lenght).chr
+          expect(subject).to_not be_taken(delta_position, positionB)
         end
+
       end
-=end
     end
   end
 end
