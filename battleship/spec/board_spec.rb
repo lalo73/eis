@@ -48,9 +48,8 @@ describe Board do
       end
 
       it {expect(subject).to_not be_empty}
-=begin
       it {expect(ship).to have_received(:vertically!)}
-
+=begin
       describe "#taken?" do
 
         it {expect(subject).to be_taken(positionA, positionB)}

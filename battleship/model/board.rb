@@ -14,6 +14,7 @@ class Board
   end
 
   def place_vertically(ship, x, y)
+    ship.vertically!
     @board[x] ||= []
     @board[x].insert(y.to_i, ship)
   end
