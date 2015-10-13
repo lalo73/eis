@@ -25,9 +25,15 @@ class Board
     taken_horizontally?(x, y) || taken_vertically?(x, y)
   end
 
+  def valid_position?(x, y)
+    real_position = x.ord - first_position
+    real_position <= width - 1 && y.to_i <= height
+  end
+
   private
 
   def place_at(ship, x, y)
+    return false unless valid_position? x, y
     @board[x] ||= []
     if @board[x][y.to_i].nil?
       @board[x].insert(y.to_i, ship)

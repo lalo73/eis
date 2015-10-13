@@ -20,7 +20,7 @@ describe Board do
     end
 
     context 'passing params' do
-      
+
       let(:widht) { 20 }
       let(:height) { 20 }
 
@@ -29,6 +29,15 @@ describe Board do
       it {expect(subject.width).to be(widht)}
       it {expect(subject.height).to be(height)}
 
+    end
+  end
+
+  describe '#valid_positoin?' do
+    context 'with default width and height' do
+      it {expect(subject).to be_valid_position("A", 1)}
+      it {expect(subject).to be_valid_position("J", 10)}
+      it {expect(subject).to_not be_valid_position("J", 11)}
+      it {expect(subject).to_not be_valid_position("K", 1)}
     end
   end
 
