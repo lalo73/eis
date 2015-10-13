@@ -13,7 +13,7 @@ class FireResult
   end
 
   def sunk?
-    false
+    @config[:sunk]
   end
 
   class << self
@@ -23,6 +23,10 @@ class FireResult
     
     def touch
       FireResult.new touch: true
+    end
+
+    def sunk
+      FireResult.new sunk: true
     end
   end
 
