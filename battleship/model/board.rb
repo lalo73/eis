@@ -33,7 +33,7 @@ class Board
   end
 
   def fire_at(x, y)
-    FireResult.new
+    FireResult.water
   end
 
   private
