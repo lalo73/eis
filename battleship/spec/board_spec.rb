@@ -69,6 +69,10 @@ describe Board do
       it {expect(subject).to_not be_empty}
       it {expect(ship).to have_received(:horizontally!)}
 
+      context 'trying to put a ship in same position' do
+        it {expect(subject.place_horizontally ship, positionA, positionB).to be_falsy}
+      end
+
     end
   end
 
@@ -84,6 +88,10 @@ describe Board do
 
       it {expect(subject).to_not be_empty}
       it {expect(ship).to have_received(:vertically!)}
+
+      context 'trying to put a ship in same position' do
+        it {expect(subject.place_vertically ship, positionA, positionB).to be_falsy}
+      end
     end
   end
 end
