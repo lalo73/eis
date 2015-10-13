@@ -32,7 +32,7 @@ describe BattleshipGame do
   describe '#fire_at' do
     context 'with a empty position' do
       it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
-      #it { expect(subject.fire_at positionA, positionB).to be_water }
+      it { expect(subject.fire_at positionA, positionB).to be_water }
       #it { expect(subject.fire_at positionA, positionB).to_not be_touch }
       #it { expect(subject.fire_at positionA, positionB).to_not be_sunk }
     end
