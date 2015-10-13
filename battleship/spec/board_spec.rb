@@ -13,6 +13,25 @@ describe Board do
 
   it { expect(subject).to be_empty }
 
+  describe '#initizlize' do
+    context 'default values' do
+      it {expect(subject.width).to be(10)}
+      it {expect(subject.height).to be(10)}
+    end
+
+    context 'passing params' do
+      
+      let(:widht) { 20 }
+      let(:height) { 20 }
+
+      subject { described_class.new widht, height }
+
+      it {expect(subject.width).to be(widht)}
+      it {expect(subject.height).to be(height)}
+
+    end
+  end
+
   describe '#taken?' do
     it {expect(subject).to_not be_taken(positionA, positionB)}
 

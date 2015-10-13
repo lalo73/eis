@@ -1,5 +1,8 @@
 class Board
-  def initialize
+  attr_reader :width, :height
+  def initialize(width=10, height=10)
+    @width = width
+    @height = height
     @board = {}
   end
 
