@@ -6,6 +6,13 @@ class BattleshipGame
   def initialize
     @board = Board.new
   end
+
+  def place_ship_horizontally(x, y)
+    ship = build_destructor
+    self.place_horizontally(ship, x, y)
+    ship
+  end
+
   def build_destructor
     Ship.new
   end
