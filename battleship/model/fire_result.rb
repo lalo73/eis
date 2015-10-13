@@ -4,4 +4,8 @@ class FireResult
     true
   end
 
+  def touch?
+    false
+  end
+
 end
