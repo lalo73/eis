@@ -58,10 +58,10 @@ describe Board do
 
   describe '#place_horizontally' do
     let(:ship) { horizontal_ship }
-    let(:positionA) { "A" }
-    let(:positionB) { "1" }
 
-    context 'with a empty board' do
+    it {expect(subject.place_horizontally ship, positionA, positionB).to eq(true)}
+
+    context 'after placing a ship' do
       before :each do
         subject.place_horizontally ship, positionA, positionB
       end
@@ -75,7 +75,9 @@ describe Board do
   describe '#place_vertically' do
     let(:ship) { vertical_ship }
 
-    context 'with a empty board' do
+    it {expect(subject.place_vertically ship, positionA, positionB).to eq(true)}
+
+    context 'after placing a ship' do
       before :each do
         subject.place_vertically ship, positionA, positionB
       end
