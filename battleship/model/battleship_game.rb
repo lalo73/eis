@@ -1,5 +1,6 @@
 require_relative './ship'
 require_relative './board'
+require_relative './fire_result'
 
 class BattleshipGame
 
@@ -26,5 +27,9 @@ class BattleshipGame
 
   def taken?(x, y)
     @board.taken? x, y
+  end
+
+  def fire_at(x, y)
+    FireResult.new
   end
 end

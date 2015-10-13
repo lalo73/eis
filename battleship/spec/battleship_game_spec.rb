@@ -1,5 +1,6 @@
 require_relative '../model/battleship_game'
 require_relative '../model/ship'
+require_relative '../model/fire_result'
 
 describe BattleshipGame do
   subject { described_class.new }
@@ -26,6 +27,34 @@ describe BattleshipGame do
 
   describe '#build_desctructor' do
     it { expect(subject.build_destructor).to be_an_instance_of(Ship) }
+  end
+
+  describe '#fire_at' do
+    context 'with a empty position' do
+      it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
+      #it { expect(subject.fire_at positionA, positionB).to be_water }
+      #it { expect(subject.fire_at positionA, positionB).to_not be_touch }
+      #it { expect(subject.fire_at positionA, positionB).to_not be_sunk }
+    end
+=begin
+    context 'with a ship at A1' do
+      it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
+      it { expect(subject.fire_at positionA, positionB).to_not be_water }
+      it { expect(subject.fire_at positionA, positionB).to be_touch }
+      it { expect(subject.fire_at positionA, positionB).to_not be_sunk }
+    end
+
+    context 'with an almost sunk ship at A1' do
+      before :each do
+        subject.fire_at positionA, positionB
+        subject.fire_at positionA, (positionB + 1)
+      end
+      it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
+      it { expect(subject.fire_at positionA, positionB).to_not be_water }
+      it { expect(subject.fire_at positionA, positionB).to_not be_touch }
+      it { expect(subject.fire_at positionA, positionB).to be_sunk }
+    end
+=end
   end
 
   describe '#place' do
