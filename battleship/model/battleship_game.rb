@@ -3,7 +3,7 @@ require_relative './board'
 
 class BattleshipGame
 
-  def initialize(x=nil, y=nil)
+  def initialize(x=Board::DEFAULT_WIDTH, y=Board::DEFAULT_HEIGHT)
     @board = Board.new(x, y)
   end
 

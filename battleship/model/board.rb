@@ -1,6 +1,8 @@
 class Board
+  DEFAULT_WIDTH = 10
+  DEFAULT_HEIGHT = 10
   attr_reader :width, :height
-  def initialize(width=10, height=10)
+  def initialize(width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT)
     @width = width
     @height = height
     @board = {}
