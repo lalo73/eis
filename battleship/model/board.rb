@@ -33,7 +33,11 @@ class Board
   end
 
   def fire_at(x, y)
-    FireResult.water
+    if taken? x, y
+      FireResult.touch 
+    else
+      FireResult.water
+    end
   end
 
   private
