@@ -5,8 +5,8 @@ describe FireResult do
     subject { described_class.water }
 
     it { expect(subject).to be_water }
-    #it { expect(subject).to_not be_touch }
-    #it { expect(subject).to_not be_sunk }
+    it { expect(subject).to_not be_touch }
+    it { expect(subject).to_not be_sunk }
   end
 =begin
   describe '#touch' do
