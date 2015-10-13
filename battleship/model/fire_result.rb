@@ -8,4 +8,8 @@ class FireResult
     false
   end
 
+  def sunk?
+    false
+  end
+
 end

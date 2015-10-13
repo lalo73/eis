@@ -34,7 +34,7 @@ describe BattleshipGame do
       it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
       it { expect(subject.fire_at positionA, positionB).to be_water }
       it { expect(subject.fire_at positionA, positionB).to_not be_touch }
-      #it { expect(subject.fire_at positionA, positionB).to_not be_sunk }
+      it { expect(subject.fire_at positionA, positionB).to_not be_sunk }
     end
 =begin
     context 'with a ship at A1' do
