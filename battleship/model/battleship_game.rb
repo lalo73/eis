@@ -3,8 +3,8 @@ require_relative './board'
 
 class BattleshipGame
 
-  def initialize
-    @board = Board.new
+  def initialize(x=nil, y=nil)
+    @board = Board.new(x, y)
   end
 
   def place_ship_horizontally(x, y)
