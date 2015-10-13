@@ -12,20 +12,12 @@ class Board
 
   def place_horizontally(ship, x, y)
     ship.horizontally!
-    @board[x] ||= []
-    if @board[x][y.to_i].nil?
-      @board[x].insert(y.to_i, ship)
-      true
-    end
+    place_at(ship, x, y)
   end
 
   def place_vertically(ship, x, y)
     ship.vertically!
-    @board[x] ||= []
-    if @board[x][y.to_i].nil?
-      @board[x].insert(y.to_i, ship)
-      true
-    end
+    place_at(ship, x, y)
   end
 
   def taken?(x, y)
@@ -34,6 +26,14 @@ class Board
   end
 
   private
+
+  def place_at(ship, x, y)
+    @board[x] ||= []
+    if @board[x][y.to_i].nil?
+      @board[x].insert(y.to_i, ship)
+      true
+    end
+  end
 
   def taken_horizontally?(x, y)
     row = @board[x] || []
