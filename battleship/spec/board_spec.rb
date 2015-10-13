@@ -8,7 +8,7 @@ describe Board do
   let(:positionA) { "A" }
   let(:positionB) { "1" }
 
-  let(:vertical_ship) { double("Ship", horizontally?: false, vertically?: true, vertically?: true,vertically!: nil, lenght: 3) }
+  let(:vertical_ship) { double("Ship", horizontally?: false, vertically?: true,vertically!: nil, lenght: 3) }
   let(:horizontal_ship) { double("Ship", horizontally?: true,horizontally!: nil, lenght: 3) }
 
   it { expect(subject).to be_empty }
