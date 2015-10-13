@@ -50,18 +50,18 @@ describe Board do
       it { expect(subject.fire_at positionA, positionB).to be_touch }
       it { expect(subject.fire_at positionA, positionB).to_not be_sunk }
     end
-=begin
+
     context 'with an almost sunk ship at A1' do
       before :each do
         subject.fire_at positionA, positionB
-        subject.fire_at positionA, (positionB + 1)
+        subject.fire_at positionA, (positionB.to_i + 1)
       end
       it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
-      it { expect(subject.fire_at positionA, positionB).to_not be_water }
+      #it { expect(subject.fire_at positionA, positionB).to_not be_water }
       it { expect(subject.fire_at positionA, positionB).to_not be_touch }
-      it { expect(subject.fire_at positionA, positionB).to be_sunk }
+      #it { expect(subject.fire_at positionA, positionB).to be_sunk }
     end
-=end
+
   end
 
   describe '#valid_positoin?' do
