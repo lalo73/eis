@@ -1,7 +1,11 @@
 class FireResult
 
+  def initialize(config={})
+    @config = config
+  end
+
   def water?
-    true
+    @config[:water]
   end
 
   def touch?
@@ -10,6 +14,12 @@ class FireResult
 
   def sunk?
     false
+  end
+
+  class << self
+    def water
+      FireResult.new water: true
+    end
   end
 
 end
