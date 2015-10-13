@@ -32,6 +32,10 @@ class Board
     real_position <= width - 1 && y.to_i <= height
   end
 
+  def fire_at(x, y)
+    FireResult.new
+  end
+
   private
 
   def place_at(ship, x, y)

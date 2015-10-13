@@ -30,6 +30,6 @@ class BattleshipGame
   end
 
   def fire_at(x, y)
-    FireResult.new
+    @board.fire_at x, y
   end
 end
