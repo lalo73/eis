@@ -9,7 +9,7 @@ class FireResult
   end
 
   def touch?
-    false
+    @config[:touch]
   end
 
   def sunk?
@@ -19,6 +19,10 @@ class FireResult
   class << self
     def water
       FireResult.new water: true
+    end
+    
+    def touch
+      FireResult.new touch: true
     end
   end
 

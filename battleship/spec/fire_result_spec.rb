@@ -8,7 +8,7 @@ describe FireResult do
     it { expect(subject).to_not be_touch }
     it { expect(subject).to_not be_sunk }
   end
-=begin
+
   describe '#touch' do
     subject { described_class.touch }
 
@@ -16,7 +16,7 @@ describe FireResult do
     it { expect(subject).to be_touch }
     it { expect(subject).to_not be_sunk }
   end
-
+=begin
   describe '#sunk' do
     subject { described_class.sunk }
 
