@@ -9,7 +9,6 @@ Feature: Place a Ship
     When I try to place my desctructor in A1
     Then my ship is not in the board at A1
 
-  @wip
   Scenario: I can't place my ship outsite the board
     Given a board of size 4x4
     When I try to place my desctructor in A5

@@ -25,3 +25,11 @@ Then(/^my ship is not in the board at (\w+)(\d+)$/) do |positionA, positionB|
   expect(@game).to be_taken(positionA, positionB)
   expect(@result).to be_falsy
 end
+
+Given(/^a board of size (\d+)x(\d+)$/) do |x, y|
+  @game = BattleshipGame.new x.to_i, y.to_i
+end
+
+Then(/^my ship is not in the board$/) do
+  expect(@result).to be_falsy
+end
