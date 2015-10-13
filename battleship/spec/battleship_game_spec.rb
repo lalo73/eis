@@ -11,15 +11,17 @@ describe BattleshipGame do
   describe '#place_ship_horizontally' do
 
     let(:ship) { double("Ship") }
+    let(:true_value) { double("True") }
 
     before :each do
       allow(subject).to receive(:build_destructor) { ship }
-      allow(subject).to receive(:place_horizontally).with(ship, positionA, positionB)
-      subject.place_ship_horizontally positionA, positionB
+      allow(subject).to receive(:place_horizontally).with(ship, positionA, positionB) { true_value }
+      @result = subject.place_ship_horizontally positionA, positionB
     end
 
     it { expect(subject).to have_received(:build_destructor) }
     it { expect(subject).to have_received(:place_horizontally).with(ship, positionA, positionB) }
+    it { expect(@result).to be(true_value) }
   end
 
   describe '#build_desctructor' do
