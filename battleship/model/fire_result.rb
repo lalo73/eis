@@ -1,6 +1,5 @@
 class FireResult
-
-  def initialize(config={})
+  def initialize(config = {})
     @config = config
   end
 
@@ -20,7 +19,7 @@ class FireResult
     def water
       FireResult.new water: true
     end
-    
+
     def touch
       FireResult.new touch: true
     end
@@ -29,5 +28,4 @@ class FireResult
       FireResult.new sunk: true
     end
   end
-
 end

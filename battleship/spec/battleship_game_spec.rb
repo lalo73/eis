@@ -4,15 +4,14 @@ require_relative '../model/fire_result'
 
 describe BattleshipGame do
   subject { described_class.new }
-  let(:positionA) { "A" }
-  let(:positionB) { "1" }
+  let(:positionA) { 'A' }
+  let(:positionB) { '1' }
 
   it { expect(subject).to be_empty }
 
   describe '#place_ship_horizontally' do
-
-    let(:ship) { double("Ship") }
-    let(:true_value) { double("True") }
+    let(:ship) { double('Ship') }
+    let(:true_value) { double('True') }
 
     before :each do
       allow(subject).to receive(:build_destructor) { ship }
@@ -37,10 +36,9 @@ describe BattleshipGame do
         subject.place_horizontally ship, positionA, positionB
       end
 
-      it {expect(subject).to_not be_empty}
+      it { expect(subject).to_not be_empty }
 
-      it {expect(subject).to be_taken positionA, positionB}
-
+      it { expect(subject).to be_taken positionA, positionB }
     end
   end
 end

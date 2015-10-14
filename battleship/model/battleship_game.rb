@@ -3,14 +3,13 @@ require_relative './board'
 require_relative './fire_result'
 
 class BattleshipGame
-
-  def initialize(x=Board::DEFAULT_WIDTH, y=Board::DEFAULT_HEIGHT)
+  def initialize(x = Board::DEFAULT_WIDTH, y = Board::DEFAULT_HEIGHT)
     @board = Board.new(x, y)
   end
 
   def place_ship_horizontally(x, y)
     ship = build_destructor
-    self.place_horizontally(ship, x, y)
+    place_horizontally(ship, x, y)
   end
 
   def build_destructor

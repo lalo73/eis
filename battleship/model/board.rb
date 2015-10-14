@@ -2,7 +2,7 @@ class Board
   DEFAULT_WIDTH = 10
   DEFAULT_HEIGHT = 10
   attr_reader :width, :height
-  def initialize(width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT)
+  def initialize(width = DEFAULT_WIDTH, height = DEFAULT_HEIGHT)
     @width = width
     @height = height
     @board = {}
@@ -32,12 +32,12 @@ class Board
     real_position <= width - 1 && y.to_i <= height
   end
 
-  #sorry future self :/
+  # sorry future self :/
   def fire_at(x, y)
     y = y.to_i
     if taken? x, y
       if taken_horizontally? x, y
-        index =  first_left(x, y)
+        index = first_left(x, y)
         get(x, index).touch! y - index
       else
         index = first_above(x, y)
@@ -57,7 +57,7 @@ class Board
 
   def first_above(x, y)
     (first_position..x.ord).to_a.reverse.map(&:chr).find do |position|
-      ship = get(position, y) 
+      ship = get(position, y)
       (!ship.nil?) && ship.vertically?
     end
   end
@@ -90,6 +90,6 @@ class Board
   end
 
   def first_position
-    "A".ord
+    'A'.ord
   end
 end
