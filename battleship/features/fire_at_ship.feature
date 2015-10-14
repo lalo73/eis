@@ -9,7 +9,6 @@ Feature: Fire at a ship
     When I fire at A1 position
     Then it hits the ship
 
-  @wip
   Scenario: I fire and sink a ship
     Given a board with an almost sunk destructor in A1
     When I fire at A3 position
