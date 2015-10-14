@@ -4,7 +4,6 @@ Feature: Fire at a ship
     When I fire at an empty position A1
     Then it hits the water
 
-  @wip
   Scenario: I fire and hits a ship
     Given a board with a destructor in A1
     When I fire at A1 position
