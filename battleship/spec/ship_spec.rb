@@ -38,7 +38,6 @@ describe Ship do
 
   describe '#touch!' do
     it { expect(subject.touch! 0).to be_touch }
-=begin
     describe 'last touch' do
       let(:last_position) { subject.lenght - 1 }
       before :each do
@@ -47,7 +46,6 @@ describe Ship do
 
       it { expect(subject.touch! (last_position)).to be_sunk }
     end
-=end
   end
 
 end

@@ -4,6 +4,11 @@ class Ship
   HORIZONTALLY = :horizontally
   VERTICALLY = :vertically
 
+  def initialize(lenght=nil)
+    @lenght = (lenght || default_lenght)
+    @state = Array.new @lenght, true
+  end
+
   def default_lenght
     3
   end
@@ -29,6 +34,11 @@ class Ship
   end
 
   def touch!(index)
-    FireResult.touch
+    @state[index] = false 
+    if @state.any?
+      FireResult.touch
+    else
+      FireResult.sunk
+    end
   end
 end
