@@ -53,18 +53,20 @@ class Board
 
   def taken_horizontally?(x, y)
     row = @board[x] || []
-    (0..y).to_a.reverse.any? do |position|
+    index = (0..y).to_a.reverse.find do |position|
       ship = row[position]
-      (!ship.nil?) && ship.horizontally? && (ship.lenght - 1 + position) >= y
+      (!ship.nil?) && ship.horizontally?
     end
+    (row[index].lenght - 1 + index) >= y if index
   end
 
   def taken_vertically?(x, y)
     ord_x = x.ord
-    (first_position..ord_x).to_a.reverse.map(&:chr).any? do |position|
+    index = (first_position..ord_x).to_a.reverse.map(&:chr).find do |position|
       ship = (@board[position] || [])[y]
-      (!ship.nil?) && ship.vertically? && (ship.lenght - 1 + position.ord) >= ord_x
+      (!ship.nil?) && ship.vertically?
     end
+    (@board[index][y].lenght - 1 + index.ord) >= ord_x if index
   end
 
   def first_position
