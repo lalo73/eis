@@ -87,6 +87,14 @@ describe Board do
     it {expect(subject.first_left "A", 0).to eq(0)}
   end
 
+  describe '#first_above' do
+    before :each do
+      subject.place_vertically vertical_ship, "A", 0
+    end
+    it {expect(subject.first_above "J", 0).to eq("A")}
+    it {expect(subject.first_above "A", 0).to eq("A")}
+  end
+
   describe '#taken?' do
     it {expect(subject).to_not be_taken(positionA, positionB)}
 

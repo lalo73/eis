@@ -55,6 +55,13 @@ class Board
     end
   end
 
+  def first_above(x, y)
+    (first_position..x.ord).to_a.reverse.map(&:chr).find do |position|
+      ship = get(position, y) 
+      (!ship.nil?) && ship.vertically?
+    end
+  end
+
   private
 
   def place_at(ship, x, y)
@@ -76,13 +83,6 @@ class Board
     y = y.to_i
     index = first_above(x, y)
     (get(index, y).lenght - 1 + index.ord) >= x.ord if index
-  end
-
-  def first_above(x, y)
-    (first_position..x.ord).to_a.reverse.map(&:chr).find do |position|
-      ship = get(position, y) 
-      (!ship.nil?) && ship.vertically?
-    end
   end
 
   def get(x, y)
