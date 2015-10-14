@@ -55,17 +55,17 @@ describe Board do
     context 'with an almost sunk ship at A1' do
       let(:sunk_position) { positionB.to_i + 2}
       before :each do
-        allow(vertical_ship).to receive(:touch!).with(0).once
-        allow(vertical_ship).to receive(:touch!).with(1).once
-        allow(vertical_ship).to receive(:touch!).with(2).and_return(FireResult.sunk).once
-        subject.place_vertically vertical_ship, positionA, positionB
+        allow(horizontal_ship).to receive(:touch!).with(0).once
+        allow(horizontal_ship).to receive(:touch!).with(1).once
+        allow(horizontal_ship).to receive(:touch!).with(2).and_return(FireResult.sunk).once
+        subject.place_horizontally horizontal_ship, positionA, positionB
         subject.fire_at positionA, positionB
         subject.fire_at positionA, (positionB.to_i + 1)
       end
       it { expect(subject.fire_at positionA, sunk_position).to an_instance_of(FireResult) }
-      #it { expect(subject.fire_at positionA, sunk_position).to_not be_water }
+      it { expect(subject.fire_at positionA, sunk_position).to_not be_water }
       it { expect(subject.fire_at positionA, sunk_position).to_not be_touch }
-      #it { expect(subject.fire_at positionA, sunk_position).to be_sunk }
+      it { expect(subject.fire_at positionA, sunk_position).to be_sunk }
     end
 
   end
