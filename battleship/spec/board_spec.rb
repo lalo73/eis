@@ -43,6 +43,7 @@ describe Board do
 
     context 'with a ship at A1' do
       before :each do
+        allow(vertical_ship).to receive(:touch!).with(0).and_return(FireResult.touch).once
         subject.place_vertically vertical_ship, positionA, positionB
       end
       it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
@@ -52,14 +53,19 @@ describe Board do
     end
 
     context 'with an almost sunk ship at A1' do
+      let(:sunk_position) { positionB.to_i + 2}
       before :each do
+        allow(vertical_ship).to receive(:touch!).with(0).once
+        allow(vertical_ship).to receive(:touch!).with(1).once
+        allow(vertical_ship).to receive(:touch!).with(2).and_return(FireResult.sunk).once
+        subject.place_vertically vertical_ship, positionA, positionB
         subject.fire_at positionA, positionB
         subject.fire_at positionA, (positionB.to_i + 1)
       end
-      it { expect(subject.fire_at positionA, positionB).to an_instance_of(FireResult) }
-      #it { expect(subject.fire_at positionA, positionB).to_not be_water }
-      it { expect(subject.fire_at positionA, positionB).to_not be_touch }
-      #it { expect(subject.fire_at positionA, positionB).to be_sunk }
+      it { expect(subject.fire_at positionA, sunk_position).to an_instance_of(FireResult) }
+      #it { expect(subject.fire_at positionA, sunk_position).to_not be_water }
+      it { expect(subject.fire_at positionA, sunk_position).to_not be_touch }
+      #it { expect(subject.fire_at positionA, sunk_position).to be_sunk }
     end
 
   end
@@ -71,6 +77,13 @@ describe Board do
       it {expect(subject).to_not be_valid_position("J", 11)}
       it {expect(subject).to_not be_valid_position("K", 1)}
     end
+  end
+
+  describe '#first_left' do
+    before :each do
+      subject.place_horizontally horizontal_ship, "A", 0
+    end
+    it {expect(subject.first_left "A", 5).to eq(0)}
   end
 
   describe '#taken?' do

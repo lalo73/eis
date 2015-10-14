@@ -32,11 +32,26 @@ class Board
     real_position <= width - 1 && y.to_i <= height
   end
 
+  #sorry future self :/
   def fire_at(x, y)
+    y = y.to_i
     if taken? x, y
-      FireResult.touch 
+      if taken_horizontally? x, y
+        index =  first_left(x, y)
+        get(x, index).touch! y - index
+      else
+        index = first_above(x, y)
+        get(index, y).touch! (x.ord - index.ord)
+      end
     else
       FireResult.water
+    end
+  end
+
+  def first_left(x, y)
+    (0..y).to_a.reverse.find do |position|
+      ship = get(x, position)
+      (!ship.nil?) && ship.horizontally?
     end
   end
 
@@ -52,20 +67,15 @@ class Board
   end
 
   def taken_horizontally?(x, y)
+    y = y.to_i
     index = first_left(x, y)
     (get(x, index).lenght - 1 + index) >= y if index
   end
 
   def taken_vertically?(x, y)
+    y = y.to_i
     index = first_above(x, y)
     (get(index, y).lenght - 1 + index.ord) >= x.ord if index
-  end
-
-  def first_left(x, y)
-    (0..y).to_a.reverse.find do |position|
-      ship = get(x, position)
-      (!ship.nil?) && ship.horizontally?
-    end
   end
 
   def first_above(x, y)
