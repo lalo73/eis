@@ -1,3 +1,5 @@
+require_relative './fire_result'
+
 class Ship
   HORIZONTALLY = :horizontally
   VERTICALLY = :vertically
@@ -24,5 +26,9 @@ class Ship
 
   def vertically?
     @position == VERTICALLY
+  end
+
+  def touch!(index)
+    FireResult.touch
   end
 end
