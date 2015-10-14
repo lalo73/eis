@@ -84,6 +84,7 @@ describe Board do
       subject.place_horizontally horizontal_ship, "A", 0
     end
     it {expect(subject.first_left "A", 5).to eq(0)}
+    it {expect(subject.first_left "A", 0).to eq(0)}
   end
 
   describe '#taken?' do
