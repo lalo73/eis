@@ -13,3 +13,4 @@ run_rake ejemplo_banco
 run_rake chopper
 run_rake rock-paper-scissors
 run_rake battleship
+run_rake calculator

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form method="POST" action="saludo">
+      <%= csrf_token_field %>
+      <label>Nombre</label>
+      <input id="nombre" type="text" name="nombre">
+      <input type="submit" value="Enviar" id="enviar"/>
+    </form>
+    hola <%= @nombre %>
+  </body>
+</html>
