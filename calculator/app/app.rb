@@ -8,6 +8,7 @@ module Ejemplo
     enable :sessions
 
     get '' do
+      @operations ||= 0
       render 'index'
     end
 
