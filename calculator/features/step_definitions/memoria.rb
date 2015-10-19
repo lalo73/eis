@@ -26,6 +26,16 @@ When(/^hago una resta$/) do
   end
 end
 
+When(/^hago un promedio$/) do
+  visit "/"
+  with_scope("#calculator") do
+    fill_in("operand1", :with => 2)
+    fill_in("operand2", :with => 4)
+    select("average", :from => "operation")
+    click_button("submit")
+  end
+end
+
 When(/^reseteo la memoria$/) do
   click_button("reset_operations")
 end
