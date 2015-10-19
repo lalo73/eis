@@ -8,11 +8,12 @@ module Ejemplo
     enable :sessions
 
     get '' do
-      @operations ||= 0
+      @operations ||= session[:operations] || 0
       render 'index'
     end
 
     post '' do
+      @operations = session[:operations] = (session[:operations] || 0) + 1
       @resultado = operate(params[:operand1].to_i, params[:operand2].to_i)
       render 'index'
     end
