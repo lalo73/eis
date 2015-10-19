@@ -18,7 +18,6 @@ Feature: memoria de cantidad de operaciones
     When hago una suma
     Then la cantidad de operaciones es 1
 
-  @wip
   Scenario: al restar aumenta la cantidad de operaciones en 1
     When hago una resta
     Then la cantidad de operaciones es 1
