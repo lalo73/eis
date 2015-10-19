@@ -1,0 +1,5 @@
+guard :rspec, cmd: 'bundle exec rspec' do
+  watch(%r{^model/(.+)\.rb$}) { |_m| 'spec' }
+  watch(%r{^spec/.+_spec\.rb$})
+  watch('spec/spec_helper.rb') { 'spec' }
+end

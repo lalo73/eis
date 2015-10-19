@@ -8,7 +8,6 @@ gem 'cucumber'
 gem 'thin'
 gem 'slim'
 
-
 gem 'capybara'
 gem 'rspec_junit_formatter'
 gem 'simplecov', "0.8.0.pre"
