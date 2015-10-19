@@ -7,18 +7,13 @@ module Ejemplo
 
     enable :sessions
 
-    get 'hola' do
-      'hey! hola'
-    end
-    
-    get 'saludo' do
-      render 'saludo'
+    get '' do
+      render 'index'
     end
 
-    post 'saludo' do
-      session[:nombre] = params[:nombre]
-      @nombre = session[:nombre]
-      render 'saludo'
+    post '' do
+      @resultado = params[:operand1].to_i + params[:operand2].to_i
+      render 'index'
     end
 
   end

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form method="POST" action="/" id="calculator">
+      <%= csrf_token_field %>
+      <label>Operando 1</label>
+      <input id="operand1" type="text" name="operand1">
+      <label>Operando 2</label>
+      <input id="operand2" type="text" name="operand2">
+      <label>Operacion:</label>
+      <select id="operation" name="operation">
+        <option value="plus">plus</option>
+      </select>
+      <input type="submit" value="Enviar" id="submit"/>
+    </form>
+    <div id="resultado">Resultado: <%= @resultado %></div>
+  <body>
+</html>
