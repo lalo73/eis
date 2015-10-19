@@ -1,4 +1,4 @@
-#require_relative 'algunmodelo?'
+# require_relative 'algunmodelo?'
 
 module Ejemplo
   class App < Padrino::Application
@@ -20,7 +20,7 @@ module Ejemplo
 
     post '/reset-operations' do
       session[:operations] = 0
-      redirect_to "/"
+      redirect_to '/'
     end
 
     private

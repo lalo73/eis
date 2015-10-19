@@ -1,5 +1,5 @@
 When(/^no hice operaciones$/) do
-  visit "/"
+  visit '/'
 end
 
 Then(/^la cantidad de operaciones es (\d+)$/) do |n|
@@ -7,35 +7,35 @@ Then(/^la cantidad de operaciones es (\d+)$/) do |n|
 end
 
 When(/^hago una suma$/) do
-  visit "/"
-  with_scope("#calculator") do
-    fill_in("operand1", :with => 2)
-    fill_in("operand2", :with => 4)
-    select("plus", :from => "operation")
-    click_button("submit")
+  visit '/'
+  with_scope('#calculator') do
+    fill_in('operand1', with: 2)
+    fill_in('operand2', with: 4)
+    select('plus', from: 'operation')
+    click_button('submit')
   end
 end
 
 When(/^hago una resta$/) do
-  visit "/"
-  with_scope("#calculator") do
-    fill_in("operand1", :with => 2)
-    fill_in("operand2", :with => 4)
-    select("subtraction", :from => "operation")
-    click_button("submit")
+  visit '/'
+  with_scope('#calculator') do
+    fill_in('operand1', with: 2)
+    fill_in('operand2', with: 4)
+    select('subtraction', from: 'operation')
+    click_button('submit')
   end
 end
 
 When(/^hago un promedio$/) do
-  visit "/"
-  with_scope("#calculator") do
-    fill_in("operand1", :with => 2)
-    fill_in("operand2", :with => 4)
-    select("average", :from => "operation")
-    click_button("submit")
+  visit '/'
+  with_scope('#calculator') do
+    fill_in('operand1', with: 2)
+    fill_in('operand2', with: 4)
+    select('average', from: 'operation')
+    click_button('submit')
   end
 end
 
 When(/^reseteo la memoria$/) do
-  click_button("reset_operations")
+  click_button('reset_operations')
 end
