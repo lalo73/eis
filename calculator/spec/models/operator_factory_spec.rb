@@ -6,5 +6,5 @@ describe OperatorFactory do
 
   it { expect(subject.plus).to be_an_instance_of(Plus) }
 
-  it { expect(subject.substraction).to be_an_instance_of(Subtraction) }
+  it { expect(subject.subtraction).to be_an_instance_of(Subtraction) }
 end

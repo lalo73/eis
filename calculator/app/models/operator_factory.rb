@@ -6,7 +6,7 @@ class OperatorFactory
     Plus.new
   end
 
-  def substraction
+  def subtraction
     Subtraction.new
   end
 end
