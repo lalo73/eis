@@ -14,7 +14,6 @@ Feature: memoria de cantidad de operaciones
     And reseteo la memoria
     Then la cantidad de operaciones es 0
 
-  @wip
   Scenario: al sumar aumenta la cantidad de operaciones en 1
     When hago una suma
     Then la cantidad de operaciones es 1
