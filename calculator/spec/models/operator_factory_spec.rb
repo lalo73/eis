@@ -5,4 +5,6 @@ describe OperatorFactory do
   subject { described_class.new }
 
   it { expect(subject.plus).to be_an_instance_of(Plus) }
+
+  it { expect(subject.substraction).to be_an_instance_of(Subtraction) }
 end
