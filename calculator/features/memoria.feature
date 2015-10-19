@@ -1,17 +1,29 @@
 @wip
 Feature: memoria de cantidad de operaciones
-
   Scenario: no hice operaciones
-    Given no hice operaciones
-    Then la cantidad de operaiones es 0
+    When no hice operaciones
+    Then la cantidad de operaciones es 0
 
   Scenario: cuando hago operaciones la cantidad de incrementa
-    Given hago una suma
+    When hago una suma
     And hago una resta
-    Then la cantidad de operaiones es 2
+    Then la cantidad de operaciones es 2
 
   Scenario: cuando reseteo la cantidad de operaciones vuelve a cero
-    Given hago una suma
+    When hago una suma
     And hago una resta
     And reseteo la memoria
-    Then la cantidad de operaiones es 0
+    Then la cantidad de operaciones es 0
+
+  Scenario: al sumar aumenta la cantidad de operaciones en 1
+    When hago una suma
+    Then la cantidad de operaciones es 1
+
+  Scenario: al restar aumenta la cantidad de operaciones en 1
+    When hago una resta
+    Then la cantidad de operaciones es 1
+
+  Scenario: al calcular el promedio la cantidad de operaciones es 1
+    When hago un promedio
+    Then la cantidad de operaciones es 1
+    
