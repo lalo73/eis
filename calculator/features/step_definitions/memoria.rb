@@ -26,3 +26,6 @@ When(/^hago una resta$/) do
   end
 end
 
+When(/^reseteo la memoria$/) do
+  click_button("reset_operations")
+end

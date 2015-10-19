@@ -18,6 +18,11 @@ module Ejemplo
       render 'index'
     end
 
+    post '/reset-operations' do
+      session[:operations] = 0
+      redirect_to "/"
+    end
+
     private
 
     def operate(operand1, operand2)

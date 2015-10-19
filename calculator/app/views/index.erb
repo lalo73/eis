@@ -18,6 +18,10 @@
       </select>
       <input type="submit" value="Enviar" id="submit"/>
     </form>
+    <form method="POST" action="/reset-operations" id="reset">
+      <%= csrf_token_field %>
+      <input type="submit" value="Resetear operaciones" id="reset_operations"/>
+    </form>
     <div id="resultado">Resultado: <%= @resultado %></div>
     <div id="operations">Cantidad de operaciones: <%= @operations %></div>
   <body>
