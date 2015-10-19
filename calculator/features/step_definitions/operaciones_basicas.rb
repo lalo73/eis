@@ -28,6 +28,13 @@ When(/^los resto$/) do
   end
 end
 
+When(/^los promedio$/) do
+  with_scope("#calculator") do
+    select("average", :from => "operation")
+    click_button("submit")
+  end
+end
+
 Then(/^el resultado es (\d+)$/) do |n|
   expect(page).to have_content("Resultado: #{n}")
 end

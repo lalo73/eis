@@ -15,7 +15,6 @@ Feature: Operaciones basicas
     When los resto
     Then el resultado es 2
 
-  @wip
   Scenario: promedio
     Given un operando es 10
     And otro operando es 2
