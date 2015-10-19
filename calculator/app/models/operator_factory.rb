@@ -1,5 +1,6 @@
 require_relative './plus'
 require_relative './subtraction'
+require_relative './average'
 
 class OperatorFactory
   def plus
@@ -8,5 +9,9 @@ class OperatorFactory
 
   def subtraction
     Subtraction.new
+  end
+
+  def average
+    Average.new
   end
 end
