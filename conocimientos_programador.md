@@ -27,4 +27,10 @@ Este es uno de los articulos que leere cuando pueda hacerme un tiempo. Unicode y
 ## * [What Every Programmer Should know about Time](http://unix4lyfe.org/time/?v=1)
 
 Un lenguaje de alto nivel bastante moderno, te abstrae bastante del manejo del tiempo incluso transfomando de un Timezone a otro. Pero aun asi, es un tema para conocer.
-Recuerdo hace un tiempo que en un proyecto teniamos que disparar un proceso a las 8 de la noche, hora argentina, y que tuvimos que tener en cuenta donde estaba la maquina de heroku para poder hacer eso.
+Recuerdo hace un tiempo que en un proyecto teniamos que disparar un proceso a las 8 de la noche, hora argentina, y que tuvimos que tener en cuenta donde estaba la maquina de heroku para poder hacer eso. Interesante articulo, corto para leer y buena info para tener en cuenta.
+
+## * [What every web developer must know about URL encoding](http://blog.lunatech.com/2009/02/03/what-every-web-developer-must-know-about-url-encoding)
+
+Este es otro de los articulos que _debo_ leer. Varias veces a llegado el cliente queriendo cambiar las urls del sitio, con tratando de meter fitros en la url, donde (si se deja sin control) podria meterse cualquier caracter y obtener valores distintos a los deseados. o mismo de pasar de parametros de _query_ a ser parte del path me tope con cosas que no son validas si no estan encodeadas.
+Incluso de generacion, tanto por codigo ruby como por javascript, diferian.
+Muy util este articulo.
