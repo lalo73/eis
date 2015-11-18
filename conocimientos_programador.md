@@ -19,3 +19,7 @@ Este articulo me parecio tocar un topico bastante interesante. Hace ya un tiempo
 Por suerte uno de mis compañeros lo noto y me corrigio.
 Por lo que vi rapidamente del articulo, me parecio un poco duro por los teoremas, y no tan explicatico como te lo describe el breve resumen de Javin Paul, aunque en su dureza puedas deducir las razones.
 Saber como manejar punto flotantes es importante, saber que 0.01 + 0.09 jamas va a dar 0.1, al menos en python.
+
+## * [What Every Developer Should know about Unicode](http://www.joelonsoftware.com/articles/Unicode.html)
+
+Este es uno de los articulos que leere cuando pueda hacerme un tiempo. Unicode y "encoding" son cosas que me cruzo regularmente, mas no todos los dias, en el trabajo. Y siempre me quedo la duda de que es y como usarlo realmente.
