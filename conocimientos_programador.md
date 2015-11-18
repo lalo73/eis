@@ -23,3 +23,8 @@ Saber como manejar punto flotantes es importante, saber que 0.01 + 0.09 jamas va
 ## * [What Every Developer Should know about Unicode](http://www.joelonsoftware.com/articles/Unicode.html)
 
 Este es uno de los articulos que leere cuando pueda hacerme un tiempo. Unicode y "encoding" son cosas que me cruzo regularmente, mas no todos los dias, en el trabajo. Y siempre me quedo la duda de que es y como usarlo realmente.
+
+## * [What Every Programmer Should know about Time](http://unix4lyfe.org/time/?v=1)
+
+Un lenguaje de alto nivel bastante moderno, te abstrae bastante del manejo del tiempo incluso transfomando de un Timezone a otro. Pero aun asi, es un tema para conocer.
+Recuerdo hace un tiempo que en un proyecto teniamos que disparar un proceso a las 8 de la noche, hora argentina, y que tuvimos que tener en cuenta donde estaba la maquina de heroku para poder hacer eso.
