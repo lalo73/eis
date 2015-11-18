@@ -12,3 +12,10 @@ El articulo es interesantisimo como programador, pero la utilidad del mismo en t
 se ve limitado. Por ejemplo, si te dedicas a desarrollar web, ¿De que utilidad es saber esta informacion?
 Con lenguajes de alto nivel (ruby, python, java, etc.) que te abstraen de ese manejo de memoria, ¿Cuanto es el uso que le podes dar?
 No digo que no sea importante saber lo que el articulo muestra, sino que se puede vivir con el conocimiento basico, a menos que tu trabajo este relacionado, como dice el articulo, en hacer aplicaciones de alto rendimiento (__"writing high performance application"__).
+
+## * [What Every Computer Scientist Should Know About Floating-Point Arithmetic](http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
+
+Este articulo me parecio tocar un topico bastante interesante. Hace ya un tiempo recuerdo hacer querido manejar un campo monetario y (por ignorancia) haber puesto un float.
+Por suerte uno de mis compañeros lo noto y me corrigio.
+Por lo que vi rapidamente del articulo, me parecio un poco duro por los teoremas, y no tan explicatico como te lo describe el breve resumen de Javin Paul, aunque en su dureza puedas deducir las razones.
+Saber como manejar punto flotantes es importante, saber que 0.01 + 0.09 jamas va a dar 0.1, al menos en python.
