@@ -34,3 +34,7 @@ Recuerdo hace un tiempo que en un proyecto teniamos que disparar un proceso a la
 Este es otro de los articulos que _debo_ leer. Varias veces a llegado el cliente queriendo cambiar las urls del sitio, con tratando de meter fitros en la url, donde (si se deja sin control) podria meterse cualquier caracter y obtener valores distintos a los deseados. o mismo de pasar de parametros de _query_ a ser parte del path me tope con cosas que no son validas si no estan encodeadas.
 Incluso de generacion, tanto por codigo ruby como por javascript, diferian.
 Muy util este articulo.
+
+## * [What should every programmer know about web development?](http://programmers.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before)
+
+La respuesta a la pregunta en programmers.stackexchange.com es de mucha utilidad para mi. Al trabajar en desarrollo web, muchas de las cosas que menciona la respuesta las conozco de oidas, pero otras las ignoro (como SEO o User experience). Ciertamente este es uno de los articulos que _debo_ tomarme el tiempo para leer.
