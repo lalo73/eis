@@ -67,3 +67,8 @@ La respuesta a esa pregunta en stackoverflow y los articulos que nombra, ciertam
 son totalmente recomendables. La seguridad es un punto muy importante y aun mas en
 el desarrollo web, donde el sitio estara abierto a todos.
 Si sos nuevo en desarrollo web, como me paso a mi, podes caer en practicas o codigo inseguro. Esta es otro articulo que leere cuando me haga el tiempo.
+
+## * [Latency Numbers Every Programmer Should Know](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html)
+
+Este me parecio raro, o sea, no lo veo como un articulo. Es mas un grafico que te ayuda a mentalizar los tiempos de latencia. Realmente no me parece esencial para la vida de un programador, a menos que la velocidad de respuesta deba ser realmente muy rapida.
+Generalmente los problemas de performance vienen por otras partes, como el acceso a una base de datos. 
