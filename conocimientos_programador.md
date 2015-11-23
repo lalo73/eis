@@ -60,3 +60,10 @@ con videojuegos multi-player. Si bien lo encuentro interesante de leer, no esenc
 
 Este me parecio, como el anterior, dedicado a cierto conjunto de programadores. Que pasa si no soy programador Java? Que pasa si no quiero y jamas programo en Java?
 Si bien, saber la informacion que presenta es _util_, no me parece esencial, y por ende sobra en la lista de *10 Articles Every Programmer Must Read*.
+
+## * [What should every programmer know about security?](http://stackoverflow.com/questions/2794016/what-should-every-programmer-know-about-security)
+
+La respuesta a esa pregunta en stackoverflow y los articulos que nombra, ciertamente
+son totalmente recomendables. La seguridad es un punto muy importante y aun mas en
+el desarrollo web, donde el sitio estara abierto a todos.
+Si sos nuevo en desarrollo web, como me paso a mi, podes caer en practicas o codigo inseguro. Esta es otro articulo que leere cuando me haga el tiempo.
