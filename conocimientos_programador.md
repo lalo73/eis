@@ -38,3 +38,10 @@ Muy util este articulo.
 ## * [What should every programmer know about web development?](http://programmers.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before)
 
 La respuesta a la pregunta en programmers.stackexchange.com es de mucha utilidad para mi. Al trabajar en desarrollo web, muchas de las cosas que menciona la respuesta las conozco de oidas, pero otras las ignoro (como SEO o User experience). Ciertamente este es uno de los articulos que _debo_ tomarme el tiempo para leer.
+
+## * [What Every Programmer Should Know About SEO](http://katemats.com/what-every-programmer-should-know-about-seo/)
+
+Este es un articulo que seguramente debi leer antes de lidiar con el equipo de SEO de
+un cliente. Los cambios de urls, la generacion de las mismas, filtros, tags, slugs, siemaps, son cosas que por ahi no agregan mucha funcionalidad y capaz se vean como cosas molestas (sobre todo de implementar despues de tener el sitio en produccion), pero aumentan mucho la visibilidad del sitio, mas cuando es una pagina de e-commers. Saber lo basico de como funciona, y las buenas practicas puede incluso a
+entender/implementar de principio brindando un mejor producto.
+Otro articulo que leere detenidamente cuando tenga un minuto.
