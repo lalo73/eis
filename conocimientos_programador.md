@@ -55,3 +55,8 @@ que opinar sobre este topico hasta despues de leer el articulo.
 
 Al leer el resumen, me parecio tendencioso el titulo de "What Every Programmer Need to know about networking", ya que no todos terminamos trabajando con videojuegos y menos
 con videojuegos multi-player. Si bien lo encuentro interesante de leer, no esencial y capaz sobra en la lista, en mi humilde opinion.
+
+## * [What Every Java Developer Should Know about String](http://javarevisited.blogspot.sg/2013/07/java-string-tutorial-and-examples-beginners-programming.html)
+
+Este me parecio, como el anterior, dedicado a cierto conjunto de programadores. Que pasa si no soy programador Java? Que pasa si no quiero y jamas programo en Java?
+Si bien, saber la informacion que presenta es _util_, no me parece esencial, y por ende sobra en la lista de *10 Articles Every Programmer Must Read*.
