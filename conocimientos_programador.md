@@ -50,3 +50,8 @@ Otro articulo que leere detenidamente cuando tenga un minuto.
 
 Es la primera vez que leo acerca del concepto de "Undefined Behaviour". No sabria
 que opinar sobre este topico hasta despues de leer el articulo.
+
+## * [What Every Programmer Need to know about networking](http://gafferongames.com/networking-for-game-programmers/what-every-programmer-needs-to-know-about-game-networking/)
+
+Al leer el resumen, me parecio tendencioso el titulo de "What Every Programmer Need to know about networking", ya que no todos terminamos trabajando con videojuegos y menos
+con videojuegos multi-player. Si bien lo encuentro interesante de leer, no esencial y capaz sobra en la lista, en mi humilde opinion.
