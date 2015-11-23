@@ -45,3 +45,8 @@ Este es un articulo que seguramente debi leer antes de lidiar con el equipo de S
 un cliente. Los cambios de urls, la generacion de las mismas, filtros, tags, slugs, siemaps, son cosas que por ahi no agregan mucha funcionalidad y capaz se vean como cosas molestas (sobre todo de implementar despues de tener el sitio en produccion), pero aumentan mucho la visibilidad del sitio, mas cuando es una pagina de e-commers. Saber lo basico de como funciona, y las buenas practicas puede incluso a
 entender/implementar de principio brindando un mejor producto.
 Otro articulo que leere detenidamente cuando tenga un minuto.
+
+## * [What Every C Programmer Should Know About Undefined Behaviour #1/3](http://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)
+
+Es la primera vez que leo acerca del concepto de "Undefined Behaviour". No sabria
+que opinar sobre este topico hasta despues de leer el articulo.
